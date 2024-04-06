@@ -21,18 +21,28 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body{
+___CSS_LOADER_EXPORT___.push([module.id, `*{
+  padding: 0;
+  margin: 0;
+}
+body, html{
   background-color: #2e2e2e;
+  height: 100%
+}
+
+#navBar{
+  display: flex;
+  justify-content: center;
 }
 
 .headerBtns{
-  border-radius: 5%;
   height: 20px;
   padding: 25px;
   text-align: center;
   border: 1px solid black;
   color: white;
-  background-color: rgb(24, 21, 21);
+  background-color: rgb(155, 139, 139);
+  border-bottom: none;
 }
 
 .headerBtns:hover{
@@ -41,9 +51,26 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body{
 }
 
 #homeContainer{
-  background-color: black;
-  height: 100px;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;AAC3B;;AAEA;EACE,iBAAiB;EACjB,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,uBAAuB;EACvB,YAAY;EACZ,iCAAiC;AACnC;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,uBAAuB;EACvB,aAAa;AACf","sourcesContent":["body{\r\n  background-color: #2e2e2e;\r\n}\r\n\r\n.headerBtns{\r\n  border-radius: 5%;\r\n  height: 20px;\r\n  padding: 25px;\r\n  text-align: center;\r\n  border: 1px solid black;\r\n  color: white;\r\n  background-color: rgb(24, 21, 21);\r\n}\r\n\r\n.headerBtns:hover{\r\n  background-color: rgb(36, 36, 37);\r\n  cursor: pointer;\r\n}\r\n\r\n#homeContainer{\r\n  background-color: black;\r\n  height: 100px;\r\n}"],"sourceRoot":""}]);
+  background-color: rgb(255, 255, 255);
+  min-height: 100%;
+  max-height: 100%;
+}
+
+#content{
+  height: 90%;
+  margin: 0 auto;
+}
+
+#titleImg {
+  height: 12rem;
+}
+
+#homePagecontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;AACX;AACA;EACE,yBAAyB;EACzB;AACF;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,uBAAuB;EACvB,YAAY;EACZ,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,oCAAoC;EACpC,gBAAgB;EAChB,gBAAgB;AAClB;;AAEA;EACE,WAAW;EACX,cAAc;AAChB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB;AACF","sourcesContent":["*{\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\nbody, html{\r\n  background-color: #2e2e2e;\r\n  height: 100%\r\n}\r\n\r\n#navBar{\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n.headerBtns{\r\n  height: 20px;\r\n  padding: 25px;\r\n  text-align: center;\r\n  border: 1px solid black;\r\n  color: white;\r\n  background-color: rgb(155, 139, 139);\r\n  border-bottom: none;\r\n}\r\n\r\n.headerBtns:hover{\r\n  background-color: rgb(36, 36, 37);\r\n  cursor: pointer;\r\n}\r\n\r\n#homeContainer{\r\n  background-color: rgb(255, 255, 255);\r\n  min-height: 100%;\r\n  max-height: 100%;\r\n}\r\n\r\n#content{\r\n  height: 90%;\r\n  margin: 0 auto;\r\n}\r\n\r\n#titleImg {\r\n  height: 12rem;\r\n}\r\n\r\n#homePagecontainer{\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  flex-direction: column\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -498,44 +525,77 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   buttons: () => (/* binding */ buttons),
 /* harmony export */   mainPage: () => (/* binding */ mainPage)
 /* harmony export */ });
+
 
 
 const header = document.querySelector('#navBarHeader');
 const navBar = document.querySelector('#navBar');
 const pageContainer = document.querySelector('#content');
 
-
-
-
-function buttons(){
- const listDiv = document.createElement('ul');
-
- const home = document.createElement('button');
- const menu = document.createElement('button');
- const contact = document.createElement('button');
- home.classList.add('headerBtns')
- menu.classList.add('headerBtns')
- contact.classList.add('headerBtns')
- home.textContent = 'Home';
- menu.textContent = 'Menu';
- contact.textContent = 'Contact';
- listDiv.style.display = 'flex';
- listDiv.style.justifyContent = 'center';
- listDiv.style.gap = '2%';
- navBar.appendChild(listDiv);
- listDiv.appendChild(home);
- listDiv.appendChild(menu);
- listDiv.appendChild(contact);
-}
-
-function mainPage(){
+function mainPage(img){
   const homeContainer = document.createElement('div');
-  homeContainer.setAttribute('homeContainer')
-  pageContainer.appendChild(homeContainer)
+  const titleImgContainer = document.createElement('div');
+  const homeSubtextContainer = document.createElement('div');
+
+  titleImgContainer.id = 'homePagecontainer'
+  homeContainer.id = 'homeContainer'
+  const titleImg = document.createElement('img');
+  titleImg.src = img;
+  titleImg.id = 'titleImg'
+  const homeTitle = document.createElement('p');
+  homeTitle.id = 'homeTitle'
+  homeTitle.textContent = 'Southern Family Cookout'
+  const homeSubtext = document.createElement('p')
+  homeSubtext.textContent = "Food so nice you'll be lickin' your fingers twice."
+  titleImgContainer.appendChild(titleImg);
+  titleImgContainer.appendChild(homeTitle);
+  homeContainer.appendChild(titleImgContainer);
+  pageContainer.appendChild(homeContainer);
+  titleImgContainer.appendChild(homeSubtextContainer)
+  homeSubtextContainer.appendChild(homeSubtext)
 }
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   menuPage: () => (/* binding */ menuPage)
+/* harmony export */ });
+
+
+
+
+function menuPage(){
+  const menuContainer = document.createElement('div');
+  menuContainer.id = 'menuContent';
+  const foodItem1Container = document.createElement('div');
+  const foodItem1TextContainer = document.createElement('div');
+  const foodItem1Header = document.createElement('p');
+  foodItem1Header.textContent = 'Slow Cooked Pork'
+
+  const foodItem1Subtext = document.createElement('p');
+  foodItem1Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+  const foodItem1Img = document.createElement('img');
+
+}
+
+/***/ }),
+
+/***/ "./src/assets/bbqImg.jpg":
+/*!*******************************!*\
+  !*** ./src/assets/bbqImg.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "b6392c125a93f7a61fb6.jpg";
 
 /***/ })
 
@@ -590,6 +650,18 @@ function mainPage(){
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -604,6 +676,29 @@ function mainPage(){
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
@@ -621,11 +716,24 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mainPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mainPage */ "./src/mainPage.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _assets_bbqImg_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bbqImg.jpg */ "./src/assets/bbqImg.jpg");
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
 
 
 
-(0,_mainPage__WEBPACK_IMPORTED_MODULE_0__.buttons)();
-(0,_mainPage__WEBPACK_IMPORTED_MODULE_0__.mainPage)();
+
+
+
+const homeBtn = document.querySelector('#homeBtn')
+const pageContainer = document.querySelector('#content');
+
+const menuBtn = document.querySelector('#menuBtn')
+
+homeBtn.addEventListener('click', (0,_mainPage__WEBPACK_IMPORTED_MODULE_0__.mainPage)(_assets_bbqImg_jpg__WEBPACK_IMPORTED_MODULE_2__))
+
+menuBtn.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_3__.menuPage)
+
+
 })();
 
 /******/ })()
