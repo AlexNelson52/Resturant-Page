@@ -1,3 +1,33 @@
-#navBarHeader{
-  background-color: black;
+*{
+  padding: 0;
+  margin: 0;
+}
+body, html{
+  background-color: #2e2e2e;
+  height: 100%
+}
+.headerBtns{
+  height: 20px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid black;
+  color: white;
+  background-color: rgb(155, 139, 139);
+  border-bottom: none;
+}
+
+.headerBtns:hover{
+  background-color: rgb(36, 36, 37);
+  cursor: pointer;
+}
+
+#homeContainer{
+  background-color: rgb(155, 139, 139);
+  min-height: 100%;
+  max-height: 100%;
+}
+
+#content{
+  height: 90%;
+  margin: 0 auto;
 }

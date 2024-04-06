@@ -21,9 +21,29 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `#navBarHeader{
+___CSS_LOADER_EXPORT___.push([module.id, `body{
+  background-color: #2e2e2e;
+}
+
+.headerBtns{
+  border-radius: 5%;
+  height: 20px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid black;
+  color: white;
+  background-color: rgb(24, 21, 21);
+}
+
+.headerBtns:hover{
+  background-color: rgb(36, 36, 37);
+  cursor: pointer;
+}
+
+#homeContainer{
   background-color: black;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,uBAAuB;AACzB","sourcesContent":["#navBarHeader{\r\n  background-color: black;\r\n}"],"sourceRoot":""}]);
+  height: 100px;
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;AAC3B;;AAEA;EACE,iBAAiB;EACjB,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,uBAAuB;EACvB,YAAY;EACZ,iCAAiC;AACnC;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,uBAAuB;EACvB,aAAa;AACf","sourcesContent":["body{\r\n  background-color: #2e2e2e;\r\n}\r\n\r\n.headerBtns{\r\n  border-radius: 5%;\r\n  height: 20px;\r\n  padding: 25px;\r\n  text-align: center;\r\n  border: 1px solid black;\r\n  color: white;\r\n  background-color: rgb(24, 21, 21);\r\n}\r\n\r\n.headerBtns:hover{\r\n  background-color: rgb(36, 36, 37);\r\n  cursor: pointer;\r\n}\r\n\r\n#homeContainer{\r\n  background-color: black;\r\n  height: 100px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -478,6 +498,7 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   buttons: () => (/* binding */ buttons),
 /* harmony export */   mainPage: () => (/* binding */ mainPage)
 /* harmony export */ });
 
@@ -489,24 +510,31 @@ const pageContainer = document.querySelector('#content');
 
 
 
-function mainPage(){
+function buttons(){
  const listDiv = document.createElement('ul');
+
  const home = document.createElement('button');
  const menu = document.createElement('button');
  const contact = document.createElement('button');
+ home.classList.add('headerBtns')
+ menu.classList.add('headerBtns')
+ contact.classList.add('headerBtns')
  home.textContent = 'Home';
  menu.textContent = 'Menu';
- contact.textContent = 'Contant';
+ contact.textContent = 'Contact';
  listDiv.style.display = 'flex';
  listDiv.style.justifyContent = 'center';
  listDiv.style.gap = '2%';
- home.style.backgroundColor = 'blue';
- menu.style.backgroundColor = 'blue';
- contact.style.backgroundColor = 'blue';
  navBar.appendChild(listDiv);
  listDiv.appendChild(home);
  listDiv.appendChild(menu);
  listDiv.appendChild(contact);
+}
+
+function mainPage(){
+  const homeContainer = document.createElement('div');
+  homeContainer.setAttribute('homeContainer')
+  pageContainer.appendChild(homeContainer)
 }
 
 /***/ })
@@ -595,6 +623,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
+
+(0,_mainPage__WEBPACK_IMPORTED_MODULE_0__.buttons)();
 (0,_mainPage__WEBPACK_IMPORTED_MODULE_0__.mainPage)();
 })();
 
