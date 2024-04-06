@@ -1,16 +1,13 @@
 export {mainPage}
 
-
-const header = document.querySelector('#navBarHeader');
-const navBar = document.querySelector('#navBar');
 const pageContainer = document.querySelector('#content');
 
 function mainPage(img){
+ pageContainer.textContent = ''
   const homeContainer = document.createElement('div');
   const titleImgContainer = document.createElement('div');
   const homeSubtextContainer = document.createElement('div');
-
-  titleImgContainer.id = 'homePagecontainer'
+   titleImgContainer.id = 'homePagecontainer'
   homeContainer.id = 'homeContainer'
   const titleImg = document.createElement('img');
   titleImg.src = img;

@@ -70,7 +70,33 @@ body, html{
   justify-content: center;
   align-items: center;
   flex-direction: column
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;AACX;AACA;EACE,yBAAyB;EACzB;AACF;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,uBAAuB;EACvB,YAAY;EACZ,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,oCAAoC;EACpC,gBAAgB;EAChB,gBAAgB;AAClB;;AAEA;EACE,WAAW;EACX,cAAc;AAChB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB;AACF","sourcesContent":["*{\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\nbody, html{\r\n  background-color: #2e2e2e;\r\n  height: 100%\r\n}\r\n\r\n#navBar{\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n.headerBtns{\r\n  height: 20px;\r\n  padding: 25px;\r\n  text-align: center;\r\n  border: 1px solid black;\r\n  color: white;\r\n  background-color: rgb(155, 139, 139);\r\n  border-bottom: none;\r\n}\r\n\r\n.headerBtns:hover{\r\n  background-color: rgb(36, 36, 37);\r\n  cursor: pointer;\r\n}\r\n\r\n#homeContainer{\r\n  background-color: rgb(255, 255, 255);\r\n  min-height: 100%;\r\n  max-height: 100%;\r\n}\r\n\r\n#content{\r\n  height: 90%;\r\n  margin: 0 auto;\r\n}\r\n\r\n#titleImg {\r\n  height: 12rem;\r\n}\r\n\r\n#homePagecontainer{\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  flex-direction: column\r\n}"],"sourceRoot":""}]);
+}
+
+#menuContent{
+  padding-top: 5%;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.foodImg{
+  height: 10rem;
+  width: 10rem;
+}
+
+.textContainer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20%;
+  
+}
+
+#menuContent{
+  display: flex;
+  flex-direction: column;
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;AACX;AACA;EACE,yBAAyB;EACzB;AACF;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,uBAAuB;EACvB,YAAY;EACZ,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,oCAAoC;EACpC,gBAAgB;EAChB,gBAAgB;AAClB;;AAEA;EACE,WAAW;EACX,cAAc;AAChB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB;AACF;;AAEA;EACE,eAAe;EACf,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,YAAY;AACd;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,kBAAkB;EAClB,QAAQ;;AAEV;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB","sourcesContent":["*{\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\nbody, html{\r\n  background-color: #2e2e2e;\r\n  height: 100%\r\n}\r\n\r\n#navBar{\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n.headerBtns{\r\n  height: 20px;\r\n  padding: 25px;\r\n  text-align: center;\r\n  border: 1px solid black;\r\n  color: white;\r\n  background-color: rgb(155, 139, 139);\r\n  border-bottom: none;\r\n}\r\n\r\n.headerBtns:hover{\r\n  background-color: rgb(36, 36, 37);\r\n  cursor: pointer;\r\n}\r\n\r\n#homeContainer{\r\n  background-color: rgb(255, 255, 255);\r\n  min-height: 100%;\r\n  max-height: 100%;\r\n}\r\n\r\n#content{\r\n  height: 90%;\r\n  margin: 0 auto;\r\n}\r\n\r\n#titleImg {\r\n  height: 12rem;\r\n}\r\n\r\n#homePagecontainer{\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  flex-direction: column\r\n}\r\n\r\n#menuContent{\r\n  padding-top: 5%;\r\n  background-color: white;\r\n  height: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n.foodImg{\r\n  height: 10rem;\r\n  width: 10rem;\r\n}\r\n\r\n.textContainer{\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: center;\r\n  gap: 20%;\r\n  \r\n}\r\n\r\n#menuContent{\r\n  display: flex;\r\n  flex-direction: column;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -517,6 +543,40 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/contactPage.js":
+/*!****************************!*\
+  !*** ./src/contactPage.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   contactPage: () => (/* binding */ contactPage)
+/* harmony export */ });
+
+
+const pageContainer = document.querySelector('#content');
+
+function contactPage(){
+  pageContainer.textContent = ''
+  const menuContainer = document.createElement('div');
+  menuContainer.id = 'menuContent';
+  const foodItem1Container = document.createElement('div');
+  const foodItem1TextContainer = document.createElement('div');
+  const foodItem1Header = document.createElement('p');
+  foodItem1Header.textContent = 'TESTTTTTTTTTT'
+
+  const foodItem1Subtext = document.createElement('p');
+  foodItem1Subtext.textContent = 'TESTTTTTTTe bone'
+  const foodItem1Img = document.createElement('img');
+  foodItem1TextContainer.appendChild(foodItem1Header);
+  foodItem1TextContainer.appendChild(foodItem1Subtext);
+  menuContainer.appendChild(foodItem1TextContainer);
+  pageContainer.appendChild(menuContainer)
+}
+
+/***/ }),
+
 /***/ "./src/mainPage.js":
 /*!*************************!*\
   !*** ./src/mainPage.js ***!
@@ -529,17 +589,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 
 
-
-const header = document.querySelector('#navBarHeader');
-const navBar = document.querySelector('#navBar');
 const pageContainer = document.querySelector('#content');
 
 function mainPage(img){
+ pageContainer.textContent = ''
   const homeContainer = document.createElement('div');
   const titleImgContainer = document.createElement('div');
   const homeSubtextContainer = document.createElement('div');
-
-  titleImgContainer.id = 'homePagecontainer'
+   titleImgContainer.id = 'homePagecontainer'
   homeContainer.id = 'homeContainer'
   const titleImg = document.createElement('img');
   titleImg.src = img;
@@ -569,21 +626,51 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   menuPage: () => (/* binding */ menuPage)
 /* harmony export */ });
+/* harmony import */ var _assets_porkSandwhich_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/porkSandwhich.jpg */ "./src/assets/porkSandwhich.jpg");
+/* harmony import */ var _assets_ribs_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/ribs.jpg */ "./src/assets/ribs.jpg");
 
+;
 
+const pageContainer = document.querySelector('#content');
 
 
 function menuPage(){
+  pageContainer.textContent = ''
   const menuContainer = document.createElement('div');
   menuContainer.id = 'menuContent';
   const foodItem1Container = document.createElement('div');
   const foodItem1TextContainer = document.createElement('div');
   const foodItem1Header = document.createElement('p');
   foodItem1Header.textContent = 'Slow Cooked Pork'
-
+  foodItem1TextContainer.classList.add('textContainer')
   const foodItem1Subtext = document.createElement('p');
   foodItem1Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
   const foodItem1Img = document.createElement('img');
+  foodItem1Img.classList.add = 'foodImg'
+  foodItem1Img.src = _assets_porkSandwhich_jpg__WEBPACK_IMPORTED_MODULE_0__
+  foodItem1TextContainer.appendChild(foodItem1Header);
+  foodItem1TextContainer.appendChild(foodItem1Subtext);
+  menuContainer.appendChild(foodItem1Img)
+  menuContainer.appendChild(foodItem1TextContainer);
+  pageContainer.appendChild(menuContainer)
+
+  pageContainer.textContent = ''
+
+  const foodItem2Container = document.createElement('div');
+  const foodItem2TextContainer = document.createElement('div');
+  const foodItem2Header = document.createElement('p');
+  foodItem2Header.textContent = 'Slow Cooked Pork'
+  foodItem2TextContainer.classList.add('textContainer')
+  const foodItem2Subtext = document.createElement('p');
+  foodItem1Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+  const foodItem2Img = document.createElement('img');
+  foodItem2Img.classList.add = 'foodImg'
+  foodItem2Img.src = _assets_ribs_jpg__WEBPACK_IMPORTED_MODULE_1__
+  foodItem2TextContainer.appendChild(foodItem2Header);
+  foodItem1TextContainer.appendChild(foodItem2Subtext);
+  menuContainer.appendChild(foodItem2Img)
+  menuContainer.appendChild(foodItem2TextContainer);
+  pageContainer.appendChild(menuContainer)
 
 }
 
@@ -596,6 +683,26 @@ function menuPage(){
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "b6392c125a93f7a61fb6.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/porkSandwhich.jpg":
+/*!**************************************!*\
+  !*** ./src/assets/porkSandwhich.jpg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "27b38161ba8e0a6c90f4.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/ribs.jpg":
+/*!*****************************!*\
+  !*** ./src/assets/ribs.jpg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "16574e4abff6367f6346.jpg";
 
 /***/ })
 
@@ -718,6 +825,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _assets_bbqImg_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/bbqImg.jpg */ "./src/assets/bbqImg.jpg");
 /* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
+/* harmony import */ var _contactPage_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./contactPage.js */ "./src/contactPage.js");
+/* harmony import */ var _assets_porkSandwhich_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/porkSandwhich.jpg */ "./src/assets/porkSandwhich.jpg");
+
 
 
 
@@ -725,13 +835,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const homeBtn = document.querySelector('#homeBtn')
-const pageContainer = document.querySelector('#content');
-
 const menuBtn = document.querySelector('#menuBtn')
+const contactBtn = document.querySelector('#contactBtn')
 
-homeBtn.addEventListener('click', (0,_mainPage__WEBPACK_IMPORTED_MODULE_0__.mainPage)(_assets_bbqImg_jpg__WEBPACK_IMPORTED_MODULE_2__))
+;(0,_mainPage__WEBPACK_IMPORTED_MODULE_0__.mainPage)(_assets_bbqImg_jpg__WEBPACK_IMPORTED_MODULE_2__)
+
+homeBtn.addEventListener('click', () => {
+  ;(0,_mainPage__WEBPACK_IMPORTED_MODULE_0__.mainPage)(_assets_bbqImg_jpg__WEBPACK_IMPORTED_MODULE_2__)
+})
 
 menuBtn.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_3__.menuPage)
+
+contactBtn.addEventListener('click', _contactPage_js__WEBPACK_IMPORTED_MODULE_4__.contactPage)
 
 
 })();
