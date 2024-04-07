@@ -7,6 +7,7 @@ const pageContainer = document.querySelector('#content');
 
 function menuPage(){
   pageContainer.textContent = ''
+  
   const menuContainer = document.createElement('div');
   menuContainer.id = 'menuContent';
 
@@ -17,10 +18,12 @@ function menuPage(){
   foodItem1TextContainer.classList.add('textContainer')
 
   const foodItem1Header = document.createElement('p');
-  foodItem1Header.textContent = 'Slow Cooked Pork'
+  foodItem1Header.classList.add('foodItemHeader')
+  foodItem1Header.textContent = 'Slow Cooked Pork Sandwhich'
 
 
   const foodItem1Subtext = document.createElement('p');
+  foodItem1Subtext.id= 'foodItem1Subtext'
   foodItem1Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
 
   const foodItem1ImgDiv = document.createElement('div');
@@ -45,7 +48,8 @@ function menuPage(){
   foodItem2TextContainer.classList.add('textContainer')
 
   const foodItem2Header = document.createElement('p');
-  foodItem2Header.textContent = 'Slow Cooked Pork'
+  foodItem2Header.classList.add('foodItemHeader')
+  foodItem2Header.textContent = 'Smoked Barbecue Ribs'
 
   const foodItem2Subtext = document.createElement('p');
   foodItem2Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
@@ -69,11 +73,13 @@ function menuPage(){
 
   const foodItem3TextContainer = document.createElement('div');
   foodItem3TextContainer.classList.add('textContainer')
+
   const foodItem3Header = document.createElement('p');
-  foodItem3Header.textContent = 'Slow Cooked Pork'
+  foodItem3Header.classList.add('foodItemHeader')
+  foodItem3Header.textContent = 'Gourment Barbacue Burgers'
 
   const foodItem3Subtext = document.createElement('p');
-  foodItem3Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+  foodItem3Subtext.textContent = '100% USDA Approved quality Fresh grass-fed beef, topped with Premium Authentic Cookout sauce. '
   
   const foodItem3Img = document.createElement('img');
   const foodItem3ImgDiv = document.createElement('div');
