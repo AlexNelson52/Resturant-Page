@@ -7,12 +7,14 @@ function contactPage(){
   const ContactContainer = document.createElement('div');
   ContactContainer.id = 'contactContent';
   const contactInfoCont1 = document.createElement('div');
+  contactInfoCont1.id = 'contactContainer1'
   const contactInfoText1 = document.createElement('h1');
   contactInfoText1.textContent = 'Address'
   const contactInfoSubtext1 = document.createElement('p');
   contactInfoSubtext1.textContent = '5555 bbq lane, BarbecueSauce, GA 55505'
 
   const contactInfoCont2 = document.createElement('div');
+  contactInfoCont2.id = 'contactContainer2'
   const contactInfoText2 = document.createElement('h1');
   const contactInfoSubtext2Hour1= document.createElement('p');
   const contactInfoSubtext2Hour2= document.createElement('p');
@@ -31,6 +33,7 @@ function contactPage(){
   contactInfoSubtext2Hour7.textContent = 'Sunday: 12pm-8pm'
 
   const contactInfoCont3 = document.createElement('div');
+  contactInfoCont3.id = 'contactContainer3'
   const contactInfoText3 = document.createElement('h1');
   const contactInfoSubtext3= document.createElement('p');
   contactInfoText3.textContent = 'Telephone Number'

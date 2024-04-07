@@ -8,6 +8,7 @@ const pageContainer = document.querySelector('#content');
 function menuPage(){
   pageContainer.textContent = ''
   
+  
   const menuContainer = document.createElement('div');
   menuContainer.id = 'menuContent';
 
@@ -19,12 +20,12 @@ function menuPage(){
 
   const foodItem1Header = document.createElement('p');
   foodItem1Header.classList.add('foodItemHeader')
-  foodItem1Header.textContent = 'Slow Cooked Pork Sandwhich'
+  foodItem1Header.textContent = 'Pulled pork sandwhich'
 
 
   const foodItem1Subtext = document.createElement('p');
   foodItem1Subtext.id= 'foodItem1Subtext'
-  foodItem1Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+  foodItem1Subtext.textContent = "The meat is slow smoked or roasted over low heat until it's fork-tender and easily shredded, then the shredded meat is tossed with barbecue sauce."
 
   const foodItem1ImgDiv = document.createElement('div');
   foodItem1ImgDiv.classList.add('foodImgDiv')
@@ -52,7 +53,7 @@ function menuPage(){
   foodItem2Header.textContent = 'Smoked Barbecue Ribs'
 
   const foodItem2Subtext = document.createElement('p');
-  foodItem2Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+  foodItem2Subtext.textContent = 'Cooked using the low indirect heat and smoke of a barbecue pit. So moist that it slides off the bone.'
 
   const foodItem2ImgDiv = document.createElement('div');
   const foodItem2Img = document.createElement('img');
