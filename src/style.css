@@ -1,19 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
   padding: 0;
   margin: 0;
 }
+
+@font-face {
+  font-family: 'MyFont';
+  src:url('./my-font.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body,html{
-  background-color: #3E3C3C;
+  background-color:  gray;
   height: 100rem;
   margin: 0 15px 0 15px;
+  user-select: none;
+  font-family: roboto;
 }
 
 #navBar{
   display: flex;
   justify-content: center;
-}
-#navBarHeader{
-
 
 }
 
@@ -33,7 +42,7 @@ body,html{
 }
 
 #homeContainer{
-  background-color: #E1DCD9;
+  background-color: Ivory;
   width: 100%;
   height: 100%;
 
@@ -45,8 +54,7 @@ body,html{
   align-items: center;
   text-align: center;
   width: 100%;
-height: 100%;
-position: relative;
+  height: 100%;
 }
 
 #titleImg {
@@ -63,13 +71,11 @@ position: relative;
 }
 
 #menuContent{
-  background-color: #3E3C3C;
+ 
   display: flex;
   width: 100%;
-  justify-content: center;
   height: fit-content;
-  height: 100%;
-  gap: 5rem;
+  justify-content: space-evenly;
 }
 
 #foodImg1, #foodImg2, #foodImg3{
@@ -77,15 +83,11 @@ position: relative;
   width: clamp(50%, 25rem, 20rem)
 }
 
-.textContainer{
-
-
-}
 
 #menuContent{
 display: flex;
 flex-direction: column;
-gap: 15%;
+gap: 5%;
 height: 100%;
 align-items: center;
 background-color: #E1DCD9;
@@ -99,22 +101,31 @@ background-color: #E1DCD9;
 #foodItemContainer1{
   display: flex;
   justify-content: center;
-  height: 20%
+  height: 20%;
+  gap: 20px;
 }
 
 #foodItem2Container{
   display: flex;
   justify-content: center;
-
-  height: 20%
+  height: 20%;
+  gap: 20px;
 }
 
 #foodItem3Container{
   display: flex;
   justify-content: center;
   height: 20%;
-  background-color: rgba(255, 255, 255, 0.424);
+  background-color: rgba(0, 0, 0, 0.424);
   width: 80%;
   color: rgb(0, 0, 0);
+  gap: 20px;
 }
 
+#contactContent{
+  background-color: white;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}

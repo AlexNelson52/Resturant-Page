@@ -16,23 +16,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./my-font.woff */ "./src/my-font.woff"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `*{
   padding: 0;
   margin: 0;
 }
-body, html{
-  background-color: #2e2e2e;
-  height: 100%
+
+@font-face {
+  font-family: 'MyFont';
+  src:url(${___CSS_LOADER_URL_REPLACEMENT_0___}) format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body,html{
+  background-color:  gray;
+  height: 100rem;
+  margin: 0 15px 0 15px;
+  user-select: none;
+  font-family: roboto;
 }
 
 #navBar{
   display: flex;
   justify-content: center;
+
 }
 
 .headerBtns{
@@ -51,14 +69,19 @@ body, html{
 }
 
 #homeContainer{
-  background-color: rgb(255, 255, 255);
-  min-height: 100%;
-  max-height: 100%;
+  background-color: Ivory;
+  width: 100%;
+  height: 100%;
+
 }
 
 #content{
-  height: 90%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 #titleImg {
@@ -69,34 +92,74 @@ body, html{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
 }
 
 #menuContent{
-  padding-top: 5%;
-  background-color: white;
-  height: 100%;
+ 
   display: flex;
-  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-evenly;
 }
 
-.foodImg{
-  height: 10rem;
-  width: 10rem;
+#foodImg1, #foodImg2, #foodImg3{
+  height: clamp(50%, 25rem, 20rem);
+  width: clamp(50%, 25rem, 20rem)
 }
 
 .textContainer{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 20%;
-  
+
+
 }
 
 #menuContent{
+display: flex;
+flex-direction: column;
+gap: 5%;
+height: 100%;
+align-items: center;
+background-color: #E1DCD9;
+}
+
+.foodImgDiv{
+  width: 20rem;
+  height: 3rem;
+
+}
+#foodItemContainer1{
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  gap: 20px;
+}
+
+#foodItem2Container{
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  gap: 20px;
+}
+
+#foodItem3Container{
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.424);
+  width: 80%;
+  color: rgb(0, 0, 0);
+  gap: 20px;
+}
+
+#contactContent{
+  background-color: white;
+  height: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
-}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;AACX;AACA;EACE,yBAAyB;EACzB;AACF;;AAEA;EACE,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,uBAAuB;EACvB,YAAY;EACZ,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,oCAAoC;EACpC,gBAAgB;EAChB,gBAAgB;AAClB;;AAEA;EACE,WAAW;EACX,cAAc;AAChB;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB;AACF;;AAEA;EACE,eAAe;EACf,uBAAuB;EACvB,YAAY;EACZ,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,YAAY;AACd;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,kBAAkB;EAClB,QAAQ;;AAEV;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB","sourcesContent":["*{\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\nbody, html{\r\n  background-color: #2e2e2e;\r\n  height: 100%\r\n}\r\n\r\n#navBar{\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n.headerBtns{\r\n  height: 20px;\r\n  padding: 25px;\r\n  text-align: center;\r\n  border: 1px solid black;\r\n  color: white;\r\n  background-color: rgb(155, 139, 139);\r\n  border-bottom: none;\r\n}\r\n\r\n.headerBtns:hover{\r\n  background-color: rgb(36, 36, 37);\r\n  cursor: pointer;\r\n}\r\n\r\n#homeContainer{\r\n  background-color: rgb(255, 255, 255);\r\n  min-height: 100%;\r\n  max-height: 100%;\r\n}\r\n\r\n#content{\r\n  height: 90%;\r\n  margin: 0 auto;\r\n}\r\n\r\n#titleImg {\r\n  height: 12rem;\r\n}\r\n\r\n#homePagecontainer{\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  flex-direction: column\r\n}\r\n\r\n#menuContent{\r\n  padding-top: 5%;\r\n  background-color: white;\r\n  height: 100%;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n\r\n.foodImg{\r\n  height: 10rem;\r\n  width: 10rem;\r\n}\r\n\r\n.textContainer{\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-align: center;\r\n  gap: 20%;\r\n  \r\n}\r\n\r\n#menuContent{\r\n  display: flex;\r\n  flex-direction: column;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAEA;EACE,UAAU;EACV,SAAS;AACX;;AAEA;EACE,qBAAqB;EACrB,0DAAwC;EACxC,gBAAgB;EAChB,kBAAkB;AACpB;;AAEA;EACE,uBAAuB;EACvB,cAAc;EACd,qBAAqB;EACrB,iBAAiB;EACjB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,uBAAuB;;AAEzB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb,kBAAkB;EAClB,uBAAuB;EACvB,YAAY;EACZ,oCAAoC;EACpC,mBAAmB;AACrB;;AAEA;EACE,iCAAiC;EACjC,eAAe;AACjB;;AAEA;EACE,uBAAuB;EACvB,WAAW;EACX,YAAY;;AAEd;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd;;AAEA;EACE,aAAa;AACf;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,mBAAmB;EACnB,WAAW;EACX,WAAW;AACb;;AAEA;;EAEE,aAAa;EACb,WAAW;EACX,mBAAmB;EACnB,6BAA6B;AAC/B;;AAEA;EACE,gCAAgC;EAChC;AACF;;AAEA;;;AAGA;;AAEA;AACA,aAAa;AACb,sBAAsB;AACtB,OAAO;AACP,YAAY;AACZ,mBAAmB;AACnB,yBAAyB;AACzB;;AAEA;EACE,YAAY;EACZ,YAAY;;AAEd;AACA;EACE,aAAa;EACb,uBAAuB;EACvB,WAAW;EACX,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,WAAW;EACX,SAAS;AACX;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,WAAW;EACX,sCAAsC;EACtC,UAAU;EACV,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,uBAAuB;EACvB,YAAY;EACZ,UAAU;EACV,aAAa;EACb,sBAAsB;AACxB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');\r\n\r\n*{\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'MyFont';\r\n  src:url('./my-font.woff') format('woff');\r\n  font-weight: 600;\r\n  font-style: normal;\r\n}\r\n\r\nbody,html{\r\n  background-color:  gray;\r\n  height: 100rem;\r\n  margin: 0 15px 0 15px;\r\n  user-select: none;\r\n  font-family: roboto;\r\n}\r\n\r\n#navBar{\r\n  display: flex;\r\n  justify-content: center;\r\n\r\n}\r\n\r\n.headerBtns{\r\n  height: 20px;\r\n  padding: 25px;\r\n  text-align: center;\r\n  border: 1px solid black;\r\n  color: white;\r\n  background-color: rgb(155, 139, 139);\r\n  border-bottom: none;\r\n}\r\n\r\n.headerBtns:hover{\r\n  background-color: rgb(36, 36, 37);\r\n  cursor: pointer;\r\n}\r\n\r\n#homeContainer{\r\n  background-color: Ivory;\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n}\r\n\r\n#content{\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  text-align: center;\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n\r\n#titleImg {\r\n  height: 12rem;\r\n}\r\n\r\n#homePagecontainer{\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  flex-direction: row;\r\n  width: 100%;\r\n  height: 30%;\r\n}\r\n\r\n#menuContent{\r\n \r\n  display: flex;\r\n  width: 100%;\r\n  height: fit-content;\r\n  justify-content: space-evenly;\r\n}\r\n\r\n#foodImg1, #foodImg2, #foodImg3{\r\n  height: clamp(50%, 25rem, 20rem);\r\n  width: clamp(50%, 25rem, 20rem)\r\n}\r\n\r\n.textContainer{\r\n\r\n\r\n}\r\n\r\n#menuContent{\r\ndisplay: flex;\r\nflex-direction: column;\r\ngap: 5%;\r\nheight: 100%;\r\nalign-items: center;\r\nbackground-color: #E1DCD9;\r\n}\r\n\r\n.foodImgDiv{\r\n  width: 20rem;\r\n  height: 3rem;\r\n\r\n}\r\n#foodItemContainer1{\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 20%;\r\n  gap: 20px;\r\n}\r\n\r\n#foodItem2Container{\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 20%;\r\n  gap: 20px;\r\n}\r\n\r\n#foodItem3Container{\r\n  display: flex;\r\n  justify-content: center;\r\n  height: 20%;\r\n  background-color: rgba(0, 0, 0, 0.424);\r\n  width: 80%;\r\n  color: rgb(0, 0, 0);\r\n  gap: 20px;\r\n}\r\n\r\n#contactContent{\r\n  background-color: white;\r\n  height: 100%;\r\n  width: 90%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -193,6 +256,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -559,20 +657,56 @@ const pageContainer = document.querySelector('#content');
 
 function contactPage(){
   pageContainer.textContent = ''
-  const menuContainer = document.createElement('div');
-  menuContainer.id = 'menuContent';
-  const foodItem1Container = document.createElement('div');
-  const foodItem1TextContainer = document.createElement('div');
-  const foodItem1Header = document.createElement('p');
-  foodItem1Header.textContent = 'TESTTTTTTTTTT'
+  const ContactContainer = document.createElement('div');
+  ContactContainer.id = 'contactContent';
+  const contactInfoCont1 = document.createElement('div');
+  const contactInfoText1 = document.createElement('h1');
+  contactInfoText1.textContent = 'Address'
+  const contactInfoSubtext1 = document.createElement('p');
+  contactInfoSubtext1.textContent = '5555 bbq lane, BarbecueSauce, GA 55505'
 
-  const foodItem1Subtext = document.createElement('p');
-  foodItem1Subtext.textContent = 'TESTTTTTTTe bone'
-  const foodItem1Img = document.createElement('img');
-  foodItem1TextContainer.appendChild(foodItem1Header);
-  foodItem1TextContainer.appendChild(foodItem1Subtext);
-  menuContainer.appendChild(foodItem1TextContainer);
-  pageContainer.appendChild(menuContainer)
+  const contactInfoCont2 = document.createElement('div');
+  const contactInfoText2 = document.createElement('h1');
+  const contactInfoSubtext2Hour1= document.createElement('p');
+  const contactInfoSubtext2Hour2= document.createElement('p');
+  const contactInfoSubtext2Hour3= document.createElement('p');
+  const contactInfoSubtext2Hour4= document.createElement('p');
+  const contactInfoSubtext2Hour5= document.createElement('p');
+  const contactInfoSubtext2Hour6= document.createElement('p');
+  const contactInfoSubtext2Hour7= document.createElement('p');
+  contactInfoText2.textContent = "Hours"
+  contactInfoSubtext2Hour1.textContent = 'Monday: Closed'
+  contactInfoSubtext2Hour2.textContent = 'Tuesday: Closed'
+  contactInfoSubtext2Hour3.textContent = 'Wednesday: 12pm-8pm'
+  contactInfoSubtext2Hour4.textContent = 'Thursday: 12pm-8pm'
+  contactInfoSubtext2Hour5.textContent = 'Firday: 12pm-8pm'
+  contactInfoSubtext2Hour6.textContent = 'Saturday: 12pm-8pm'
+  contactInfoSubtext2Hour7.textContent = 'Sunday: 12pm-8pm'
+
+  const contactInfoCont3 = document.createElement('div');
+  const contactInfoText3 = document.createElement('h1');
+  const contactInfoSubtext3= document.createElement('p');
+  contactInfoText3.textContent = 'Telephone Number'
+  contactInfoSubtext3.textContent = '555-555-5555'
+  
+
+  contactInfoCont1.appendChild(contactInfoText1)
+  contactInfoCont1.appendChild(contactInfoSubtext1)
+  contactInfoCont2.appendChild(contactInfoText2);
+  contactInfoCont2.appendChild(contactInfoSubtext2Hour1);
+  contactInfoCont2.appendChild(contactInfoSubtext2Hour2);
+  contactInfoCont2.appendChild(contactInfoSubtext2Hour3);
+  contactInfoCont2.appendChild(contactInfoSubtext2Hour4);
+  contactInfoCont2.appendChild(contactInfoSubtext2Hour5);
+  contactInfoCont2.appendChild(contactInfoSubtext2Hour6);
+  contactInfoCont2.appendChild(contactInfoSubtext2Hour7);
+  contactInfoCont3.appendChild(contactInfoText3);
+  contactInfoCont3.appendChild(contactInfoSubtext3);
+  ContactContainer.appendChild(contactInfoCont1);
+  ContactContainer.appendChild(contactInfoCont2);
+  ContactContainer.appendChild(contactInfoCont3);
+
+  pageContainer.appendChild(ContactContainer)
 }
 
 /***/ }),
@@ -628,8 +762,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _assets_porkSandwhich_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/porkSandwhich.jpg */ "./src/assets/porkSandwhich.jpg");
 /* harmony import */ var _assets_ribs_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/ribs.jpg */ "./src/assets/ribs.jpg");
+/* harmony import */ var _assets_burger_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/burger.jpg */ "./src/assets/burger.jpg");
 
 ;
+
 
 const pageContainer = document.querySelector('#content');
 
@@ -638,41 +774,87 @@ function menuPage(){
   pageContainer.textContent = ''
   const menuContainer = document.createElement('div');
   menuContainer.id = 'menuContent';
+
   const foodItem1Container = document.createElement('div');
+  foodItem1Container.id = 'foodItemContainer1'
+
   const foodItem1TextContainer = document.createElement('div');
+  foodItem1TextContainer.classList.add('textContainer')
+
   const foodItem1Header = document.createElement('p');
   foodItem1Header.textContent = 'Slow Cooked Pork'
-  foodItem1TextContainer.classList.add('textContainer')
+
+
   const foodItem1Subtext = document.createElement('p');
   foodItem1Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+
+  const foodItem1ImgDiv = document.createElement('div');
+  foodItem1ImgDiv.classList.add('foodImgDiv')
+
   const foodItem1Img = document.createElement('img');
-  foodItem1Img.classList.add = 'foodImg'
+  foodItem1Img.id = 'foodImg1'
   foodItem1Img.src = _assets_porkSandwhich_jpg__WEBPACK_IMPORTED_MODULE_0__
+
   foodItem1TextContainer.appendChild(foodItem1Header);
   foodItem1TextContainer.appendChild(foodItem1Subtext);
-  menuContainer.appendChild(foodItem1Img)
-  menuContainer.appendChild(foodItem1TextContainer);
+  foodItem1ImgDiv.appendChild(foodItem1Img)
+  foodItem1Container.appendChild(foodItem1ImgDiv)
+  foodItem1Container.appendChild(foodItem1TextContainer)
+  menuContainer.appendChild(foodItem1Container)
   pageContainer.appendChild(menuContainer)
-
-  pageContainer.textContent = ''
 
   const foodItem2Container = document.createElement('div');
+  foodItem2Container.id = 'foodItem2Container'
+
   const foodItem2TextContainer = document.createElement('div');
+  foodItem2TextContainer.classList.add('textContainer')
+
   const foodItem2Header = document.createElement('p');
   foodItem2Header.textContent = 'Slow Cooked Pork'
-  foodItem2TextContainer.classList.add('textContainer')
+
   const foodItem2Subtext = document.createElement('p');
-  foodItem1Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+  foodItem2Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+
+  const foodItem2ImgDiv = document.createElement('div');
   const foodItem2Img = document.createElement('img');
-  foodItem2Img.classList.add = 'foodImg'
+  foodItem2ImgDiv.classList.add('foodImgDiv')
+  foodItem2Img.id = 'foodImg2'
   foodItem2Img.src = _assets_ribs_jpg__WEBPACK_IMPORTED_MODULE_1__
+
   foodItem2TextContainer.appendChild(foodItem2Header);
-  foodItem1TextContainer.appendChild(foodItem2Subtext);
-  menuContainer.appendChild(foodItem2Img)
-  menuContainer.appendChild(foodItem2TextContainer);
+  foodItem2TextContainer.appendChild(foodItem2Subtext);
+  foodItem2ImgDiv.appendChild(foodItem2Img)
+  foodItem2Container.appendChild(foodItem2ImgDiv)
+  foodItem2Container.appendChild(foodItem2TextContainer)
+  menuContainer.appendChild(foodItem2Container)
   pageContainer.appendChild(menuContainer)
 
+  const foodItem3Container = document.createElement('div');
+  foodItem3Container.id = 'foodItem3Container'
+
+  const foodItem3TextContainer = document.createElement('div');
+  foodItem3TextContainer.classList.add('textContainer')
+  const foodItem3Header = document.createElement('p');
+  foodItem3Header.textContent = 'Slow Cooked Pork'
+
+  const foodItem3Subtext = document.createElement('p');
+  foodItem3Subtext.textContent = 'Slow cooked pork so moist that it slides off the bone'
+  
+  const foodItem3Img = document.createElement('img');
+  const foodItem3ImgDiv = document.createElement('div');
+  foodItem3ImgDiv.classList.add('foodImgDiv')
+  foodItem3Img.id = 'foodImg3'
+  foodItem3Img.src = _assets_burger_jpg__WEBPACK_IMPORTED_MODULE_2__
+
+  foodItem3TextContainer.appendChild(foodItem3Header);
+  foodItem3TextContainer.appendChild(foodItem3Subtext);
+  foodItem3ImgDiv.appendChild(foodItem3Img)
+  foodItem3Container.appendChild(foodItem3ImgDiv)
+  foodItem3Container.appendChild(foodItem3TextContainer)
+  menuContainer.appendChild(foodItem3Container)
+  pageContainer.appendChild(menuContainer)
 }
+
 
 /***/ }),
 
@@ -683,6 +865,16 @@ function menuPage(){
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "b6392c125a93f7a61fb6.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/burger.jpg":
+/*!*******************************!*\
+  !*** ./src/assets/burger.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ec4f39439c26bfe9bc3a.jpg";
 
 /***/ }),
 
@@ -703,6 +895,16 @@ module.exports = __webpack_require__.p + "27b38161ba8e0a6c90f4.jpg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "16574e4abff6367f6346.jpg";
+
+/***/ }),
+
+/***/ "./src/my-font.woff":
+/*!**************************!*\
+  !*** ./src/my-font.woff ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "31d6cfe0d16ae931b73c.woff";
 
 /***/ })
 
@@ -731,6 +933,9 @@ module.exports = __webpack_require__.p + "16574e4abff6367f6346.jpg";
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -806,6 +1011,32 @@ module.exports = __webpack_require__.p + "16574e4abff6367f6346.jpg";
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
 /******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
 /******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

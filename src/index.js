@@ -3,7 +3,6 @@ import "./style.css"
 import bbqImg from './assets/bbqImg.jpg';
 import {menuPage} from "./menu.js";
 import { contactPage } from "./contactPage.js";
-import porkSandwhich from './assets/porkSandwhich.jpg'
 
 const homeBtn = document.querySelector('#homeBtn')
 const menuBtn = document.querySelector('#menuBtn')
